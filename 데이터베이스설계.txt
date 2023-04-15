@@ -1,0 +1,41 @@
+데이터베이스 설계
+
+form_mail_ajax_insert.php
+
+
+MVC 모델링
+화면을 구현(HTML5, css3) => View
+화면제어(js, jqeury) => Control
+데이터(데이터베이스) => Model
+
+FTP URL 경로
+saeeun.dothome.co.kr/photo/form_mail_test.php
+saeeun.dothome.co.kr/photo/form_mail_insert_test.php
+
+
+
+saeeun.dothome.co.kr/myadmin
+
+saeeun
+anvktk0037!!
+
+서버이름 localhost 
+사용자이름 로그인
+
+php파일에서는 ===는 사용 안됨, == 사용할 것
+
+
+
+
+
+고유인덱스번호 : 자동 증가번호
+
+
+포토그라피
+폼메일테이블
+form_mail_table
+idx          자동증가번호(AI) integer 11byte
+user_name    이름            문자열 String VARCHAR(가변길이형) 50자
+user_email   이메일          문자열 String VARCHAR(가변길이형) 50자
+user_message 메시지          문자열 String text(고정길이) 약 64kb
+user_date    날짜            문자열 String VARCHAR(가변길이형) 10자 YYYY-MM-DD

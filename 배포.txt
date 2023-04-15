@@ -1,0 +1,62 @@
+닷홈 웹호스팅 url =>포토그라피
+moonjong22.dothome.co.kr/photo/
+
+
+saeeun.dothome.co.kr/photo/
+saeeun.dothome.co.kr/myadmin
+
+ID : saeeun
+PW : anvktk0037!!
+
+
+
+
+[배포 깃허브]
+리파지토리
+photo
+ID : jeungse
+Email : gmlwn293@naver.com
+PW : anvktk0037
+
+0415_브란드_포토그라피_포트폴리오_폼메일전송_메시지_닷홈베포_깃허브배포
+
+깃배쉬 다운로드
+https://git-scm.com/downloads
+
+
+git bash(우분투 명령어 활용)
+
+파일경로
+D:/프론트엔드_제8기_주말반_정새은/0415_브란드_포토그라피_깃허브배포
+
+cd D:/프론트엔드_제8기_주말반_정새은/0415_브란드_포토그라피_깃허브배포
+
+목록확인
+ls -la
+
+
+
+0. 리파지토리 만들기
+photo
+
+1. git 설정
+
+git init 
+
+
+2. 환경설정
+
+git config user.name 'jeungse'
+git config user.email 'gmlwn293@naver.com'
+
+3. 깃 리모트 오리진 주소 추가
+git remote add origin https://github.com/jeungse/photo.git
+
+4. 추가된 리모트 오리진 주소 확인하기
+git remote -v
+
+
+
+[다음 포트폴리오]
+쇼핑몰
+마켓컬리

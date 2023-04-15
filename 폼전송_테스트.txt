@@ -1,0 +1,68 @@
+0409_브란드_포토그라피_포트폴리오_폼전송_데이터베이스_MYSQL_PHP_AJAX
+
+http://localhost/0409_%eb%b8%8c%eb%9e%80%eb%93%9c_%ed%8f%ac%ed%86%a0%ea%b7%b8%eb%9d%bc%ed%94%bc_%ed%8f%ac%ed%8a%b8%ed%8f%b4%eb%a6%ac%ec%98%a4_%ed%8f%bc%ec%a0%84%ec%86%a1_%eb%8d%b0%ec%9d%b4%ed%84%b0%eb%b2%a0%ec%9d%b4%ec%8a%a4_MYSQL_PHP_AJAX/
+
+SSL 인증서를 가지고 있는 도메인
+https://
+
+깃허브 
+https://github.saeeun.io
+
+닷홈 웹서버/데이터베이스서버
+CORS(Cross Origin Resource Sharing)
+http://saeeun.co.kr/member_insert.php
+http://saeeun.co.kr/member_insert.jsp
+
+
+1. html > submit 버튼의 class 이름을 가져와 js 파일에 작성 시작
+2. js 파일 : 
+    $('.send-btn').on({
+        click(e){
+            e.preventDefault();
+
+            $ajax({
+                url: './블라블라.php',
+                type: 'POST', (get과 post가 있지만 보통 post를 사용한다)
+                data: {
+                    이름: $('#userName').val(), 
+                    이메일: $('#userEmail').val(),
+                    메시지: $('#userMessage').val()
+                }
+                success(result){
+                    console.log(`성공메세지 작성 ${result}`); (result에는 php서버의 메세지가 나온다.)
+                },
+                error(error){
+                    console.log(`실패메세지 작성 ${error}`); (error에는 php서버의 실패메세지??)
+                }
+            })
+        }
+    })
+
+3. 디펙토리 : formData 정리
+    $('.send-btn').on({
+        click(e){
+            e.preventDefault();
+
+            const irum = $('#userName').val();
+            const email = $('#userEmail').val();
+            const message = $('#userMessage').val();
+
+            const formData = {
+                이름: irum,
+                이메일: email, 
+                메시지: message
+            }
+
+            $ajax({
+                url: './블라블라.php',
+                type: 'POST', (get과 post가 있지만 보통 post를 사용한다)
+                data: formData,
+                success(result){
+                    console.log(`성공메세지 작성 ${result}`); (result에는 php서버의 메세지가 나온다.)
+                },
+                error(error){
+                    console.log(`실패메세지 작성 ${error}`); (error에는 php서버의 실패메세지??)
+                }
+            })
+        }
+    })
